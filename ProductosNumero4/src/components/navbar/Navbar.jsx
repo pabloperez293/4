@@ -1,23 +1,28 @@
 import React from "react";
 import "./Navbar.css";
+import logo from "../../assets/logo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faApple } from "@fortawesome/free-brands-svg-icons";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <img src=".../assets/react.svg" alt="logo" className="logo" />
+      <div className="navbar-container">
 
-      <div className="buscador">
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
-        <input type="text" placeholder="Buscar.." />
+        <img src={logo} alt="logo" className="logo" />
+        <div className="buscador">
+        <FontAwesomeIcon icon={faCartPlus} />
+
+          <input type="text" placeholder="Buscar.." className="buscador-input" />
+        </div>
       </div>
-
       <div className="navbar-menu">
-        <a href="#">Destacado</a>
-        <a href="#">Frutas</a>
-        <a href="#">Verduras</a>
-        <a href="#"> Congelados</a>
+        <a href="#">Destacado<FontAwesomeIcon className="star-icon" icon={faStar} /></a>
+        <a href="#">Frutas <FontAwesomeIcon icon={faApple} /></a>
+        <a href="#">Verduras </a>
+        <a href="#"> Congelados  </a>
       </div>
     </div>
   );

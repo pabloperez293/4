@@ -5,7 +5,6 @@ import Navbar from './components/navbar/Navbar';
 function App() {
   return (
   <div className='container'>
-    <h2>Mi tienda</h2>
     <Navbar />
     <ProductList />
     

@@ -5,7 +5,7 @@
   font-family: Arial, sans-serif;
 }
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   min-height: 100vh;
   background: #ccccce96;
 }
