@@ -1,19 +1,12 @@
-import React, { useState } from "react";
-import ProductList from "./components/productList/ProductList";
-import Navbar from "./components/navbar/Navbar";
+import React from "react";
+import { BrowserRouter, Routes } from "react-router-dom";
 
 function App() {
-  const [carrito, setCarrito] = useState([]);
-
-  const agregarCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-  };
-
   return (
-    <div className="container">
-      <Navbar cantidadCarrito={carrito.length} />
-      <ProductList agregarCarrito={agregarCarrito} carrito={carrito} />
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <Routes></Routes>
+    </BrowserRouter>
   );
 }
 
