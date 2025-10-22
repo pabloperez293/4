@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import ItemList from "./ItemList/ItemList";
 
-export const itemListContainer = () => {
-  const [productos, setProductos] = useState([]);
+export const ItemListContainer = () => {
+  const [products, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch("/data/productos.json")
+    fetch("/data/products.json")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Tenemos un problema en los prodcutos");
@@ -18,9 +19,9 @@ export const itemListContainer = () => {
   return (
     <section>
       <h1>Distribuidora</h1>
-      <ItemList list={productos} />
+      <ItemList list={products} />
     </section>
   );
 };
 
-export default itemListContainer;
+export default ItemListContainer;
